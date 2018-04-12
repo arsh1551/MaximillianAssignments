@@ -1,0 +1,12 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12"><br/>
+      <label>Click me</label>
+<button (click)="togglePara()" class="btn btn-primary">Display Details</button>
+<p *ngIf="displayPara">This is my secret paragraph!</p>
+  <!--div *ngFor="let btnText of buttonClicks" [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{textWhite:buttonClicks.length>=5}">{{btnText}}</div-->
+  <div *ngFor="let count of buttonClicks" [ngStyle]="{backgroundColor:count>=5?'blue':'transparent'}" [ngClass]="{textWhite:count>=5}">Button clicked {{count}} times</div>
+    </div>
+  </div>
+</div>
